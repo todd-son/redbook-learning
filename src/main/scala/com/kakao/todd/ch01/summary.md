@@ -16,7 +16,7 @@ FP란 side effect가 없는 순수함수들로 프로그램을 구축하는 것
 - 모듈성 증가로 test, 재사용, 병렬화, 일반화가 쉽다
 
 # 1.1. FP 이점
-[SampleCode] (Sample01_SideEffect.scala)
+[SampleCode](Sample01_SideEffect.scala)
 
 
 
