@@ -1,7 +1,8 @@
-# Functional Programming
+# 서론
+## Functional Programming
 FP란 side effect가 없는 순수함수들로 프로그램을 구축하는 것
 
-# Side effect 
+## Side effect 
 - 변수 수정
 - 자료구조 수정
 - 객체의 필드 변경
@@ -9,4 +10,13 @@ FP란 side effect가 없는 순수함수들로 프로그램을 구축하는 것
 - 콘솔에 출력하거나 사용자 입력을 읽어드린다.
 - 파일을 기록하거나 파일을 읽어드린다.
 - 화면을 그린다.
+
+## FP의 특징
+- 작성하는 방식의 제약이지 표현가능한 프로그램의 제약이 아님 (입출력, 오류처리, 자료수정 다 할 수 있다.)
+- 모듈성 증가로 test, 재사용, 병렬화, 일반화가 쉽다
+
+# 1.1. FP 이점
+[SampleCode] (Sample01_SideEffect.scala)
+
+
 
