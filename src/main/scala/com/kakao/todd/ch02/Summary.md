@@ -1,4 +1,5 @@
-# Functional Loop
+# Functional Programming Basic
+## Functional Loop
 
 ```
 Tail recursion
@@ -10,26 +11,26 @@ Tail recursion
 
 [SampleCode](Sample01_Loop.scala)
 
-# High-order Function (HOF)
+## High-order Function (HOF)
 
 함수를 인자로 받는 함수를 고차함수라고 한다.
 
 [SampleCode](Sample02_HighOrderFunction.scala)
 
-# Polymorphic Function
+## Polymorphic Function
 
 임의의 타입에 동작하는 함수.
 
 [SampleCode](Sample03_PolymorphicFunction.scala)
 
-# Function as value 
+## Function as value 
 
 스칼라에서 함수 리터럴을 정의할 때 실제로 정의되는 것은 apply라는 메서드를 가진 하나의 객체
 (a,b) => a < b 와 같은 함수 리터를은 객체 생성에 대한 구문적 겉치레이다.
 
 [SampleCode](Sample04_FunctionAsValue.scala)
 
-# Partial Application
+## Partial Application
 
 함수의 인자의 일부만 적용하는 것
 
