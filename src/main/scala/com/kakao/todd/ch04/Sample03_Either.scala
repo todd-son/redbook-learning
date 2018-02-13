@@ -24,8 +24,7 @@ object EitherTest {
     }
 }
 
-sealed trait Either[+E, +A] {
-}
+sealed trait Either[+E, +A]
 
 case class Left[+E](value: E) extends Either[E, Nothing]
 

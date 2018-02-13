@@ -8,10 +8,12 @@ Scala에서는 C 스타일의 오류 부호와 달리 형식에 완전히 안전
 ## Strength and Weakness of Exception
 
 ### Weakness
+
 **예외는 참조 투명성을 위반하고 문맥 의존성이 생긴다.** 자바에서도 예외는 오류 처리에만 사용하고 흐름의 제어에는 사용하지 말아야 한다는 원칙이 있다.
 **예외는 안전하지 않다.** Function Int => Int만 보고도 이 함수가 예외를 던진다는 사실을 전혀 알 수 없다. 그래서 
 
 ## Strength
+
 오류 처리 논리의 통합과 중앙집중화 
 
 ```
@@ -19,7 +21,6 @@ Scala에서는 C 스타일의 오류 부호와 달리 형식에 완전히 안전
 더욱 중요한 점은 checked exception은 고차 함수에서 통하지 않는다. 고차 함수에서는 checked exception에 대한 오류 처리를 강제할 수 없다.
 
 def map[A,B](l: List[A)(f: A => B): List[B]
-
 ```
 
 ## Problems of Sentinel value
