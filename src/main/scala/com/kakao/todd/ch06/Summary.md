@@ -20,3 +20,20 @@ Referential transparency 를 되찾는 관건은 상태 갱신을 명시적으�
 (상태 전이)라고 한다. type 형식 별칭을 이용해서 리팩토링을 수행해보자.
 
 [Sample03_RefactoringRandom](Sample03_RefactoringRandom.scala)
+
+## OOP VS FP
+
+여기서는 객체 지향과 FP의 상태를 다루는 방식에 대해서 살펴본다.
+먼저 객체지향의 경우 객체의 내부 상태를 둔다.
+
+[Sample04_OOP](Sample04_OOP.scala)
+
+함수형의 경우 내부 상태를 두는 대신 새로운 상태를 만들어서 준다.
+
+[Sample05_FP](Sample05_FP.scala)
+
+마지막으로 살펴볼 코드는 함수형 도메인 모델링 방식으로 리팩토링한 것이다.
+Functional Domain Modeling에서는 보통 Behavior와 State의 책임을 분리합니다.
+도메인 모델은 상태를 도메인 서비스는 행위를 책임집니다.
+
+[Sample06_FP_DDD](Sample06_FP_DDD.scala)
