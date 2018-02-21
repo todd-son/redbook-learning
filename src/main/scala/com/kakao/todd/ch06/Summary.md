@@ -1,3 +1,4 @@
+# State
 ## Side effect of Random Utility
 
 Referential transparency 를 만족하지 못한다. 이에 메소드의 검사성이 떨어진다.

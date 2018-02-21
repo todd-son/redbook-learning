@@ -4,7 +4,7 @@ object Generics {
   def main(args: Array[String]): Unit = {
     val cCon1 = NonVarContainer(new Dog("todd"))
     // coVariant
-    // val pCon1: NonVarContainer[Animal] = cCon1
+//     val pCon1: NonVarContainer[Animal] = cCon1
 
     val cCon2 = CoVarContainer(new Dog("todd"))
     val pCon2: CoVarContainer[Animal] = cCon2

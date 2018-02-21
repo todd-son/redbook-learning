@@ -9,6 +9,8 @@ object LiftTest {
 
     def npf = pf.lift
 
+    println(pf(4))
+    println(pf(-2))
     println(npf(-1))
     println(npf(4))
   }

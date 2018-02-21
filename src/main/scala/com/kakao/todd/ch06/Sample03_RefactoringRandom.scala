@@ -4,7 +4,6 @@ import com.kakao.todd.ch06.RNG2.SimpleRNG2
 
 
 object RefactoringRandomTest extends App {
-
   val result = RNG2.nextInt(SimpleRNG2(42))
 
   println(result._1)
@@ -14,7 +13,6 @@ object RefactoringRandomTest extends App {
 case class State[S, +A](run: S => (A, S))
 
 trait RNG2 {
-
   def nextInt: (Int, RNG2)
 }
 

@@ -19,6 +19,10 @@ object FunStream {
 
     println(stream2.head)
     println(stream2.head)
+    println(stream2.head)
+    println(stream2.head)
+    println(stream2.head)
+    println(stream2.head)
     println("==========")
 
     def ones: Stream[Int] = Stream.cons(1, ones)

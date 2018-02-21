@@ -10,6 +10,10 @@ object PartialApplication {
     val cur = curry[Int, Int, Int]((x, y) => x + y)
 
     println(cur(3)(2))
+
+    val partial2 = cur(3)
+
+    println(partial2(2))
   }
 
   def partial[A, B, C](a: A, f: (A, B) => C): B => C =

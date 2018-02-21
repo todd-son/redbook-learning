@@ -26,7 +26,8 @@ object Account3Test extends App {
 
   println(b.balance)
 
-  AccountService.debit(b, 10).foreach(a => auditLog(s"Account ${a.no} debit ${a.balance}"))
+  val c = AccountService.debit(b, 10)
+  c.foreach(a => auditLog(s"Account ${a.no} debit ${a.balance}"))
 
   def auditLog(log: String) = println(log)
 }
