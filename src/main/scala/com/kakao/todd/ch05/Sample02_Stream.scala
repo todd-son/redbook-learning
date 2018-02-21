@@ -23,14 +23,14 @@ object FunStream {
 
     def ones: Stream[Int] = Stream.cons(1, ones)
 
-    println(ones.take(5).toList)
+    println(ones.take(10).toList)
   }
 }
 
 sealed trait Stream[+A] {
   def head: Option[A] = this match {
     case Empty => None
-    case Cons(h, t) => Some(h())
+    case Cons(h, _) => Some(h())
   }
 
   def foldRight[B](z: => B)(f: (A, => B) => B): B = this match {
@@ -41,7 +41,7 @@ sealed trait Stream[+A] {
   def map[B](f: (A => B)): Stream[B] = foldRight(empty[B])((h, t) => cons(f(h), t))
 
   def take(n: Int): Stream[A] = this match {
-    case Cons(h, t) if n == 1 => cons(h(), Empty)
+    case Cons(h, _) if n == 1 => cons(h(), Empty)
     case Cons(h, t) if n > 1 => cons(h(), t().take(n-1))
     case _ => Empty
   }
