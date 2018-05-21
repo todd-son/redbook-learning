@@ -1,7 +1,6 @@
 package com.kakao.todd.ch06
 
 object PureRandomTest extends App {
-
   val (result, rng) = SimpleRNG(42).nextInt
 
   println(result)

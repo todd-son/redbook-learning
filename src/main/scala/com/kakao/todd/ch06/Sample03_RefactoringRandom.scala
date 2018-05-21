@@ -30,7 +30,5 @@ object RNG2 {
   }
 
   def nextInt: Rand[Int] = _.nextInt
-
-
 }
 

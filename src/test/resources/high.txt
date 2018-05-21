@@ -1,0 +1,107 @@
+mappingMaps {
+	source("").target("SCHOOL_STUDENT_STAT").targetKey("SCHOOL_ID","YEAR")
+		.filter("filterStudentCount") {
+			to("SCHOOL_ID").from("7")
+			to("REPORT_DETAIL_ID").ignoreUpsert().transform("reportDetailId").from("#url")
+			to("YEAR").from(
+				ref("schoolReportDetailCache.SCHOOL_REPORT_DETAIL.YEAR")
+					.query("ID" to ref("THIS.target.REPORT_DETAIL_ID"))
+			)
+			to("DAY_OR_NIGHT").transform("#주간").from()
+			to("STUDENT").transform("getTotalCount").from("22")
+			to("EMPTY_REASON").from("15")
+			to("REG_DTTM").ignoreUpdate().transform("now").from()
+			to("MOD_DTTM").transform("now").from()
+			to("STATUS").transform("#S").from()
+		}
+	source("").target("SCHOOL_GRADE_STUDENT_STAT").targetKey("SCHOOL_ID","GRADE","YEAR","GRADE_TYPE","CLASS_TYPE")
+		.filter("filterYearStudentCount") {
+			to("SCHOOL_ID").from("7")
+			to("GRADE").transform("#1").from()
+			to("GRADE_TYPE").transform("#고").from()
+			to("CLASS_TYPE").transform("#일반").from()
+			to("DAY_OR_NIGHT").transform("#주간").from()
+			to("STUDENT").from("17")
+			to("REPORT_DETAIL_ID").ignoreUpsert().transform("reportDetailId").from("#url")
+			to("YEAR").from(
+				ref("schoolReportDetailCache.SCHOOL_REPORT_DETAIL.YEAR")
+					.query("ID" to ref("THIS.target.REPORT_DETAIL_ID"))
+			)
+			to("DISP_ORDER").transform("#1").from()
+			to("REG_DTTM").ignoreUpdate().transform("now").from()
+			to("MOD_DTTM").transform("now").from()
+			to("STATUS").transform("#S").from()
+		}
+	source("").target("SCHOOL_GRADE_STUDENT_STAT").targetKey("SCHOOL_ID","GRADE","YEAR","GRADE_TYPE","CLASS_TYPE")
+		.filter("filterYearStudentCount") {
+			to("SCHOOL_ID").from("7")
+			to("GRADE").transform("#2").from()
+			to("GRADE_TYPE").transform("#고").from()
+			to("CLASS_TYPE").transform("#일반").from()
+			to("DAY_OR_NIGHT").transform("#주간").from()
+			to("STUDENT").from("18")
+			to("REPORT_DETAIL_ID").ignoreUpsert().transform("reportDetailId").from("#url")
+			to("YEAR").from(
+				ref("schoolReportDetailCache.SCHOOL_REPORT_DETAIL.YEAR")
+					.query("ID" to ref("THIS.target.REPORT_DETAIL_ID"))
+			)
+			to("DISP_ORDER").transform("#2").from()
+			to("REG_DTTM").ignoreUpdate().transform("now").from()
+			to("MOD_DTTM").transform("now").from()
+			to("STATUS").transform("#S").from()
+		}
+	source("").target("SCHOOL_GRADE_STUDENT_STAT").targetKey("SCHOOL_ID","GRADE","YEAR","GRADE_TYPE","CLASS_TYPE")
+		.filter("filterYearStudentCount") {
+			to("SCHOOL_ID").from("7")
+			to("GRADE").transform("#3").from()
+			to("GRADE_TYPE").transform("#고").from()
+			to("CLASS_TYPE").transform("#일반").from()
+			to("DAY_OR_NIGHT").transform("#주간").from()
+			to("STUDENT").from("19")
+			to("REPORT_DETAIL_ID").ignoreUpsert().transform("reportDetailId").from("#url")
+			to("YEAR").from(
+				ref("schoolReportDetailCache.SCHOOL_REPORT_DETAIL.YEAR")
+					.query("ID" to ref("THIS.target.REPORT_DETAIL_ID"))
+			)
+			to("DISP_ORDER").transform("#3").from()
+			to("REG_DTTM").ignoreUpdate().transform("now").from()
+			to("MOD_DTTM").transform("now").from()
+			to("STATUS").transform("#S").from()
+		}
+	source("").target("SCHOOL_GRADE_STUDENT_STAT").targetKey("SCHOOL_ID","GRADE","YEAR","GRADE_TYPE","CLASS_TYPE")
+		.filter("filterYearStudentCount") {
+			to("SCHOOL_ID").from("7")
+			to("GRADE").transform("#0").from()
+			to("GRADE_TYPE").transform("#고").from()
+			to("CLASS_TYPE").transform("#특수").from()
+			to("DAY_OR_NIGHT").transform("#주간").from()
+			to("STUDENT").from("20")
+			to("REPORT_DETAIL_ID").ignoreUpsert().transform("reportDetailId").from("#url")
+			to("YEAR").from(
+				ref("schoolReportDetailCache.SCHOOL_REPORT_DETAIL.YEAR")
+					.query("ID" to ref("THIS.target.REPORT_DETAIL_ID"))
+			)
+			to("DISP_ORDER").transform("#7").from()
+			to("REG_DTTM").ignoreUpdate().transform("now").from()
+			to("MOD_DTTM").transform("now").from()
+			to("STATUS").transform("#S").from()
+		}
+	source("").target("SCHOOL_GRADE_STUDENT_STAT").targetKey("SCHOOL_ID","GRADE","YEAR","GRADE_TYPE","CLASS_TYPE")
+		.filter("filterYearStudentCount") {
+			to("SCHOOL_ID").from("7")
+			to("GRADE").transform("#0").from()
+			to("GRADE_TYPE").transform("#고").from()
+			to("CLASS_TYPE").transform("#순회").from()
+			to("DAY_OR_NIGHT").transform("#주간").from()
+			to("STUDENT").from("21")
+			to("REPORT_DETAIL_ID").ignoreUpsert().transform("reportDetailId").from("#url")
+			to("YEAR").from(
+				ref("schoolReportDetailCache.SCHOOL_REPORT_DETAIL.YEAR")
+					.query("ID" to ref("THIS.target.REPORT_DETAIL_ID"))
+			)
+			to("DISP_ORDER").transform("#8").from()
+			to("REG_DTTM").ignoreUpdate().transform("now").from()
+			to("MOD_DTTM").transform("now").from()
+			to("STATUS").transform("#S").from()
+		}
+}
