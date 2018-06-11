@@ -2,7 +2,7 @@ package com.kakao.todd.ch02
 
 object HighOrderFunction {
   def main(args: Array[String]): Unit = {
-    println(formatResult("factorial", 3, Loop.factorial))
+    println(formatResult("factorial", 3, Loop.fib))
   }
 
   // naming convention for function arguments(f, g, h)

@@ -14,10 +14,8 @@
 
 이에 모노이드를 이용하면 균형접기(balance fold)를 할 수 있다. 
 
-op(a, op(b, op(c,d))) = op(op(op(a,b) ,c) ,d)  = op(op(a,b), op(c,d))
+op(a, op(b, op(c,d))) = op(op(op(a,b), c), d)  = op(op(a,b), op(c,d))
 
 균형접기가 중요한 이유는 바로 병렬처리가 가능하다는 것이다. 
-
-# parallel parsing
 
 

@@ -1,8 +1,8 @@
-package com.kakao.todd.ch02
+package com.kakao.todd.ch02.exercise
 
-object Loop {
+object Exer01_Fib {
   def main(args: Array[String]): Unit = {
-    for(i <- 1 to 10)
+    for ( i <- 1 to 10)
       println(fib(i))
   }
 
