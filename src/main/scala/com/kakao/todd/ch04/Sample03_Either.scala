@@ -2,8 +2,7 @@ package com.kakao.todd.ch04
 
 import scala.util.Try
 
-object EitherTest {
-
+object Sample03_Either {
   def main(args: Array[String]): Unit = {
     println(safeDiv(2, 1))
     println(safeDiv(2, 0))
@@ -24,8 +23,4 @@ object EitherTest {
     }
 }
 
-sealed trait Either[+E, +A]
 
-case class Left[+E](value: E) extends Either[E, Nothing]
-
-case class Right[+A](value: A) extends Either[Nothing, A]

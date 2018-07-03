@@ -12,27 +12,3 @@ object FunOption {
     if (xs.isEmpty) None
     else Some(xs.sum / xs.size)
 }
-
-sealed trait Option[+A] {
-  def map[B](f: A => B): Option[B] = this match {
-    case None => None
-    case Some(x) => Some(f(x))
-  }
-
-  // B >: A B must be super type of A
-  // => B  laziness
-  def getOrElse[B >: A](default: => B): B = this match {
-    case None => default
-    case Some(x) => x
-  }
-
-}
-
-object Option {
-  def lift[A,B](f: A => B): Option[A] => Option[B] = _.map(f)
-
-}
-
-case object None extends Option[Nothing]
-
-case class Some[+A](get: A) extends Option[A]
